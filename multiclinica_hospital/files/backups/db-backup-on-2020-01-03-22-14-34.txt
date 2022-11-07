@@ -1,0 +1,1156 @@
+#
+# TABLE STRUCTURE FOR: accountant
+#
+
+DROP TABLE IF EXISTS accountant;
+
+CREATE TABLE `accountant` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(200) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `ion_user_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=81 DEFAULT CHARSET=latin1;
+
+INSERT INTO accountant (`id`, `img_url`, `name`, `email`, `address`, `phone`, `x`, `ion_user_id`) VALUES ('72', 'uploads/favicon7.png', 'Mr. Accountant', 'accountant@dms.com', 'New York, USA', '+9975 6765 7654', '', '112');
+
+
+#
+# TABLE STRUCTURE FOR: appointment
+#
+
+DROP TABLE IF EXISTS appointment;
+
+CREATE TABLE `appointment` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `patient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `time_slot` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `s_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `e_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `remarks` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `add_date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `registration_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `s_time_key` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `request` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=369 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: bankb
+#
+
+DROP TABLE IF EXISTS bankb;
+
+CREATE TABLE `bankb` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `group` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+INSERT INTO bankb (`id`, `group`, `status`) VALUES ('1', 'A+', '0 Bags');
+INSERT INTO bankb (`id`, `group`, `status`) VALUES ('2', 'A-', '0 Bags');
+INSERT INTO bankb (`id`, `group`, `status`) VALUES ('3', 'B+', '0 Bags');
+INSERT INTO bankb (`id`, `group`, `status`) VALUES ('4', 'B-', '0 Bags');
+INSERT INTO bankb (`id`, `group`, `status`) VALUES ('5', 'AB+', '0 Bags');
+INSERT INTO bankb (`id`, `group`, `status`) VALUES ('6', 'AB-', '0 Bags');
+INSERT INTO bankb (`id`, `group`, `status`) VALUES ('7', 'O+', '0 Bags');
+INSERT INTO bankb (`id`, `group`, `status`) VALUES ('8', 'O-', '0 Bags');
+
+
+#
+# TABLE STRUCTURE FOR: diagnostic_report
+#
+
+DROP TABLE IF EXISTS diagnostic_report;
+
+CREATE TABLE `diagnostic_report` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `invoice` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `report` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: doctor
+#
+
+DROP TABLE IF EXISTS doctor;
+
+CREATE TABLE `doctor` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `department` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `profile` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `y` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  `ion_user_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=148 DEFAULT CHARSET=latin1;
+
+INSERT INTO doctor (`id`, `img_url`, `name`, `email`, `address`, `phone`, `department`, `profile`, `x`, `y`, `ion_user_id`) VALUES ('133', 'uploads/download_(2)1.png', 'Mr Doctor', 'doctor@dms.com', 'Collegepara, Rajbari -7700', '+0123456789', 'Cardiology', 'MD Cardiology', '', '', '652');
+
+
+#
+# TABLE STRUCTURE FOR: donor
+#
+
+DROP TABLE IF EXISTS donor;
+
+CREATE TABLE `donor` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `group` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  `age` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  `sex` varchar(10) CHARACTER SET utf8 DEFAULT NULL,
+  `ldd` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `add_date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=18 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: email
+#
+
+DROP TABLE IF EXISTS email;
+
+CREATE TABLE `email` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `subject` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `message` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
+  `reciepient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=31 DEFAULT CHARSET=latin1;
+
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('12', 'Meeting', '1560941824', '<p>sdfdsfsdfsd</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('11', 'MashaALlah Alhamdulillah', '1560941734', '<p>fvdbgfgffhfghfgh</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('10', 'thrtyryrty', '1560941667', '<p>rtyrtyrtyr</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('9', 'fgdfgdfgd', '1560941628', '<p>gdfgdfgdfgd</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('8', 'sxsscsdcss', '1560941480', '<p>dcsdcsdcsdc</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('13', 'egrgvdfg', '1560943281', '<p>dfgdfgdfg</p>\n', 'All Patient', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('14', 'MashaALlah Alhamdulillah', '1560944788', '<p>fdgfdhdfhfgfg</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('15', 'sdfsdfds', '1561124017', '<p>fsdfsdfsd</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('16', 'MashaALlah Alhamdulillah', '1561149967', '<p>gedfgdfgdfgd</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('17', 'tryrttryryrt', '1561150052', '<p>yrtyrtyrtyr</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('18', 'MashaALlah Alhamdulillah', '1561150076', '<p>vfdgdgdgfdg</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('19', 'MashaALlah Alhamdulillah', '1561150317', '<p>gdfgfdgdg</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('20', 'vfgfgdfg', '1561150366', '<p>dfgdfgdfgdf</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('21', 'fgfdgdgd', '1561150381', '<p>fgdfgdfgdf</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('22', 'rfgfgdfgdf', '1561150398', '<p>gdfgdfgdfgf</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('23', 'gdfgdfgdfgdf', '1561150428', '<p>gdfgfdgdfg</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('24', 'gdfgdfgdfg', '1561150460', '<p>dfgdfgdfgd</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('25', 'sdfsfsfs', '1561150477', '<p>dfdsfdsfsdf</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('26', 'fvffvdvdfv', '1561150563', '<p>dfvdfvfdvdf</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('27', 'MashaALlah Alhamdulillah', '1561150576', '<p>dcscsdcsd</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('28', 'MashaALlah Alhamdulillah', '1561150594', '<p>fgdfgfdgdfgd</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('29', 'xccascac', '1561152934', '<p>ascascacas</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+INSERT INTO email (`id`, `subject`, `date`, `message`, `reciepient`, `user`) VALUES ('30', 'jcdsbcjkdsbcb', '1561152973', '<p>dcsdjkbcjsbcjs</p>\n', 'rizvi.mahmud.plabon@gmail.com', '1');
+
+
+#
+# TABLE STRUCTURE FOR: email_settings
+#
+
+DROP TABLE IF EXISTS email_settings;
+
+CREATE TABLE `email_settings` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `admin_email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `type` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `password` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+INSERT INTO email_settings (`id`, `admin_email`, `type`, `user`, `password`) VALUES ('1', 'something@yourdomain.com', '', '', '');
+
+
+#
+# TABLE STRUCTURE FOR: expense
+#
+
+DROP TABLE IF EXISTS expense;
+
+CREATE TABLE `expense` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `note` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=86 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: expense_category
+#
+
+DROP TABLE IF EXISTS expense_category;
+
+CREATE TABLE `expense_category` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `y` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=57 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: featured
+#
+
+DROP TABLE IF EXISTS featured;
+
+CREATE TABLE `featured` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `profile` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+INSERT INTO featured (`id`, `img_url`, `name`, `profile`, `description`) VALUES ('1', 'uploads/images.jpg', 'Dr Momenuzzaman', 'Cardiac Specialized', 'Redantium, totam rem aperiam, eaque ipsa qu ab illo inventore veritatis et quasi architectos beatae vitae dicta sunt explicabo. Nemo enims sadips ipsums un.');
+INSERT INTO featured (`id`, `img_url`, `name`, `profile`, `description`) VALUES ('2', 'uploads/doctor.png', 'Dr RahmatUllah Asif', 'Cardiac Specialized', 'Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence');
+INSERT INTO featured (`id`, `img_url`, `name`, `profile`, `description`) VALUES ('3', 'uploads/download_(2)2.png', 'Dr A.R.M. Jamil', 'Cardiac Specialized', 'Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence');
+
+
+#
+# TABLE STRUCTURE FOR: groups
+#
+
+DROP TABLE IF EXISTS groups;
+
+CREATE TABLE `groups` (
+  `id` mediumint(8) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(20) NOT NULL,
+  `description` varchar(100) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=11 DEFAULT CHARSET=utf8;
+
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('1', 'admin', 'Administrator');
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('2', 'members', 'General User');
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('3', 'Accountant', 'For Financial Activities');
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('4', 'Doctor', '');
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('5', 'Patient', '');
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('6', 'Nurse', '');
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('7', 'Pharmacist', '');
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('8', 'Laboratorist', '');
+INSERT INTO groups (`id`, `name`, `description`) VALUES ('10', 'Receptionist', 'Receptionist');
+
+
+#
+# TABLE STRUCTURE FOR: holidays
+#
+
+DROP TABLE IF EXISTS holidays;
+
+CREATE TABLE `holidays` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `doctor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `y` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=69 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: lab
+#
+
+DROP TABLE IF EXISTS lab;
+
+CREATE TABLE `lab` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `category_name` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `report` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date_string` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1924 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: lab_category
+#
+
+DROP TABLE IF EXISTS lab_category;
+
+CREATE TABLE `lab_category` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `reference_value` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
+
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('35', 'Troponin-I', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('36', 'CBC (DIGITAL)', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('37', 'Eosinophil', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('38', 'Platelets', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('39', 'Malarial Parasites (MP)', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('40', 'BT/ CT', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('41', 'ASO Titre', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('42', 'CRP', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('43', 'R/A test', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('44', 'VDRL', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('45', 'TPHA', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('46', 'HBsAg (Screening)', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('47', 'HBsAg (Confirmatory)', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('48', 'CFT for Kala Zar', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('49', 'CFT for Filaria', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('50', 'Pregnancy Test', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('51', 'Blood Grouping', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('52', 'Widal Test', 'Pathological Test', '(70-110)mg/dl');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('53', 'RBS', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('54', 'Blood Urea', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('55', 'S. Creatinine', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('56', 'S. cholesterol', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('57', 'Fasting Lipid Profile', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('58', 'S. Bilirubin', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('59', 'S. Alkaline Phosohare', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('61', 'S. Calcium', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('62', 'RBS with CUS', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('63', 'SGPT', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('64', 'SGOT', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('65', 'Urine for R/E', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('66', 'Urine C/S', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('67', 'Stool for R/E', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('68', 'Semen Analysis', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('69', 'S. Electrolyte', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('70', 'S. T3/ T4/ THS', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('71', 'MT', 'Pathological Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('106', 'ESR', 'Patho Test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('107', 'FBS CUS', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('108', 'Hb%', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('114', '2HABF', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('113', 'FBS', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('115', 'S. TSH', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('116', 'S. T3', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('117', 'DC', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('118', 'TC', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('120', 'S. Uric acid', 'Pathological test', '');
+INSERT INTO lab_category (`id`, `category`, `description`, `reference_value`) VALUES ('126', 'eosinphil', 'Pathology Test', '');
+
+
+#
+# TABLE STRUCTURE FOR: laboratorist
+#
+
+DROP TABLE IF EXISTS laboratorist;
+
+CREATE TABLE `laboratorist` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `y` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `ion_user_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=4 DEFAULT CHARSET=latin1;
+
+INSERT INTO laboratorist (`id`, `img_url`, `name`, `email`, `address`, `phone`, `x`, `y`, `ion_user_id`) VALUES ('3', 'uploads/favicon1.png', 'Mr Laboratorist', 'laboratorist@dms.com', 'Tampa, Florida, USA', '+9976 65443 76547', '', '', '111');
+
+
+#
+# TABLE STRUCTURE FOR: login_attempts
+#
+
+DROP TABLE IF EXISTS login_attempts;
+
+CREATE TABLE `login_attempts` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ip_address` varchar(15) NOT NULL,
+  `login` varchar(100) NOT NULL,
+  `time` int(11) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+#
+# TABLE STRUCTURE FOR: medical_history
+#
+
+DROP TABLE IF EXISTS medical_history;
+
+CREATE TABLE `medical_history` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `patient_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_address` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `img_url` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `registration_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=60 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: medicine
+#
+
+DROP TABLE IF EXISTS medicine;
+
+CREATE TABLE `medicine` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `price` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `box` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `s_price` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `quantity` int(100) DEFAULT NULL,
+  `generic` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `company` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `effects` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `e_date` varchar(70) CHARACTER SET utf8 DEFAULT NULL,
+  `add_date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2865 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: medicine_category
+#
+
+DROP TABLE IF EXISTS medicine_category;
+
+CREATE TABLE `medicine_category` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=19 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: nurse
+#
+
+DROP TABLE IF EXISTS nurse;
+
+CREATE TABLE `nurse` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `y` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `z` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `ion_user_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=13 DEFAULT CHARSET=latin1;
+
+INSERT INTO nurse (`id`, `img_url`, `name`, `email`, `address`, `phone`, `x`, `y`, `z`, `ion_user_id`) VALUES ('8', 'uploads/favicon4.png', 'Mrs Nurse', 'nurse@dms.com', 'Uttara, Dhaka', '+88 6878654335678', '', '', '', '109');
+
+
+#
+# TABLE STRUCTURE FOR: ot_payment
+#
+
+DROP TABLE IF EXISTS ot_payment;
+
+CREATE TABLE `ot_payment` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `patient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_c_s` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_a_s_1` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_a_s_2` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_anaes` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `n_o_o` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `c_s_f` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `a_s_f_1` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `a_s_f_2` varchar(11) CHARACTER SET utf8 DEFAULT NULL,
+  `anaes_f` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `ot_charge` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `cab_rent` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `seat_rent` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `others` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `discount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_fees` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `hospital_fees` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `gross_total` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `flat_discount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `amount_received` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=86 DEFAULT CHARSET=latin1;
+
+INSERT INTO ot_payment (`id`, `patient`, `doctor_c_s`, `doctor_a_s_1`, `doctor_a_s_2`, `doctor_anaes`, `n_o_o`, `c_s_f`, `a_s_f_1`, `a_s_f_2`, `anaes_f`, `ot_charge`, `cab_rent`, `seat_rent`, `others`, `discount`, `date`, `amount`, `doctor_fees`, `hospital_fees`, `gross_total`, `flat_discount`, `amount_received`, `status`, `user`) VALUES ('85', '451', 'None', '123', 'None', '125', 'dbdbd', '', '1000', '0', '1000', '', '', '', '', '', '1506195494', '2000', '2000', '0', '2000', '', '1000', 'unpaid', '614');
+
+
+#
+# TABLE STRUCTURE FOR: patient
+#
+
+DROP TABLE IF EXISTS patient;
+
+CREATE TABLE `patient` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `sex` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `birthdate` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `age` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `bloodgroup` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `ion_user_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `add_date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `registration_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `how_added` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
+
+INSERT INTO patient (`id`, `img_url`, `name`, `email`, `doctor`, `address`, `phone`, `sex`, `birthdate`, `age`, `bloodgroup`, `ion_user_id`, `patient_id`, `add_date`, `registration_time`, `how_added`) VALUES ('1', 'uploads/download.jpg', 'Mr Patient', 'patient@dms.com', '133', 'Colegepara, Rajbari', '+0123456789', 'Male', '01-01-1987', '', 'A+', '681', '101223', '01/30/19', '', '');
+
+
+#
+# TABLE STRUCTURE FOR: patient_deposit
+#
+
+DROP TABLE IF EXISTS patient_deposit;
+
+CREATE TABLE `patient_deposit` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `patient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `payment_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `deposited_amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `amount_received_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `deposit_type` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `gateway` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1586 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: patient_material
+#
+
+DROP TABLE IF EXISTS patient_material;
+
+CREATE TABLE `patient_material` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `url` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `date_string` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=73 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: payment
+#
+
+DROP TABLE IF EXISTS payment;
+
+CREATE TABLE `payment` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `vat` varchar(100) CHARACTER SET utf8 NOT NULL DEFAULT '0',
+  `x_ray` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `flat_vat` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `discount` varchar(100) CHARACTER SET utf8 NOT NULL DEFAULT '0',
+  `flat_discount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `gross_total` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `remarks` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `hospital_amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `category_amount` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `category_name` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `amount_received` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `deposit_type` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient_address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date_string` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2013 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: payment_category
+#
+
+DROP TABLE IF EXISTS payment_category;
+
+CREATE TABLE `payment_category` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `c_price` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `type` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `d_commission` int(100) DEFAULT NULL,
+  `h_commission` int(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=128 DEFAULT CHARSET=latin1;
+
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('16', 'E.C.G', 'Payments from E.C.G', '250', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('78', 'USG - Pregnancy Pro', 'USG - Pregnancy Pro', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('19', 'Ward Fee', 'Deposits from ward', '400', 'others', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('20', 'Admission Fees', 'Patient Admission Fees', '100', 'others', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('23', 'Oxyzen', 'Income From Oxyzen', '0', 'others', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('24', 'Nebulizer', 'Income From Nebulizer', '60', 'others', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('25', 'Newspaper sell', 'Income From selling old newspaper', '0', 'others', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('33', 'Ambulance', 'Ambulance er vara', '0', 'others', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('34', 'HbAIc', 'gfdsegfdgd', '800', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('35', 'Troponin-I', 'Pathological Test', '1000', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('36', 'CBC (DIGITAL)', 'Pathological Test', '450', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('37', 'Eosinophil', 'Pathological Test', '100', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('38', 'Platelets', 'Pathological Test', '200', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('39', 'Malarial Parasites (MP)', 'Pathological Test', '100', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('40', 'BT/ CT', 'Pathological Test', '200', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('41', 'ASO Titre', 'Pathological Test', '250', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('42', 'CRP', 'Pathological Test', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('43', 'R/A test', 'Pathological Test', '300', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('44', 'VDRL', 'Pathological Test', '200', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('45', 'TPHA', 'Pathological Test', '350', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('46', 'HBsAg (Screening)', 'Pathological Test', '300', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('47', 'HBsAg (Confirmatory)', 'Pathological Test', '600', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('48', 'CFT for Kala Zar', 'Pathological Test', '0', 'diagnostic', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('49', 'CFT for Filaria', 'Pathological Test', '0', 'diagnostic', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('50', 'Pregnancy Test', 'Pathological Test', '150', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('51', 'Blood Grouping', 'Pathological Test', '100', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('52', 'Widal Test', 'Pathological Test', '300', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('53', 'RBS', 'Pathological Test', '100', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('54', 'Blood Urea', 'Pathological Test', '250', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('55', 'S. Creatinine', 'Pathological Test', '250', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('56', 'S. cholesterol', 'Pathological Test', '250', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('57', 'Fasting Lipid Profile', 'Pathological Test', '850', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('58', 'S. Bilirubin', 'Pathological Test', '150', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('59', 'S. Alkaline Phosohare', 'Pathological Test', '300', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('60', 'S. Albumin', 'Pathological Test', '250', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('61', 'S. Calcium', 'Pathological Test', '350', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('62', 'RBS with CUS', 'Pathological Test', '160', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('63', 'SGPT', 'Pathological Test', '300', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('64', 'SGOT', 'Pathological Test', '300', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('65', 'Urine for R/E', 'Pathological Test', '150', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('66', 'Urine C/S', 'Pathological Test', '350', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('67', 'Stool for R/E', 'Pathological Test', '150', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('68', 'Semen Analysis', 'Pathological Test', '300', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('69', 'S. Electrolyte', 'Pathological Test', '800', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('70', 'S. T3/ T4/ THS', 'Pathological Test', '1000', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('71', 'MT', 'Pathological Test', '150', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('77', 'USG - Whole Abdomen ', 'USG - Whole Abdomen ', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('73', 'ECHO Normal', 'ksdjkfsd', '700', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('76', 'x-ray chest', 'Normal', '200', 'diagnostic', '10', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('79', 'USG - KUB', 'USG - KUB', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('80', 'USG - Liver', 'USG - Liver', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('81', 'USG - Breast (Left)', 'USG - Breast (Left)', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('82', 'USG - Breast (Right)', 'USG - Breast (Right)', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('83', 'X-RAY - Ba MealS+D  ', 'X-RAY - Ba MealS+D  ', '1400', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('84', 'X-RAY - Ba Swallo Oesopha', 'X-RAY - Ba Swallo Oesopha', '1000', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('85', 'X-RAY - KUB                         ', 'X-RAY - KUB ', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('86', 'X-RAY - Leg Joint(B/V)(L/R)', 'X-RAY - Leg Joint(B/V)(L/R)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('87', 'X-RAY -Knee Joint(L/R)', 'X-RAY -Knee Joint(L/R)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('88', 'X-RAY - Finger(B/V) ', 'X-RAY - Finger(B/V) ', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('89', 'X-RAY - Wrist(B/V)(L/R) ', 'X-RAY - Wrist(B/V)(L/R) ', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('90', 'X-RAY - Hand(B/V)(L/R)                   ', 'X-RAY - Hand(B/V)(L/R)       ', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('91', 'X-RAY - Elbow(B/V)(L/R)', 'X-RAY - Elbow(B/V)(L/R)', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('92', 'X-RAY - Erm(B/V)(L/R )', 'X-RAY - Erm(B/V)(L/R )', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('93', 'X-RAY - Shoulder Joint (B/V)', 'X-RAY - Shoulder Joint (B/V)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('94', 'X-RAY - Shoulder Joint (A/P)', 'X-RAY - Shoulder Joint (A/P)', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('95', 'X-RAY - Foot (B/V)', 'X-RAY - Foot (B/V)', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('96', 'X-RAY - Thigh(B/V)', 'X-RAY - Thigh(B/V)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('97', 'X-RAY - Ankle(B/V)', 'X-RAY - Ankle(B/V)', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('98', 'X-RAY - Hip Joint(A/P)', 'X-RAY - Hip Joint(A/P)', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('99', 'X-RAY - Pelvis(A/P)', 'X-RAY - Pelvis(A/P)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('100', 'X-RAY - L/S(B/V)(Lamber Spine)', 'X-RAY - L/S(B/V)(Lamber Spine)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('101', 'X-RAY - L/S(A/P)(LamberSpine)', 'X-RAY - L/S(A/P)(LamberSpine)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('102', 'X-RAY - D/L(A/P)(Thoracic)', 'X-RAY - D/L(A/P)(Thoracic)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('103', 'X-RAY - Mandable(B/V)', 'X-RAY - Mandable(B/V)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('104', 'X-RAY -C/S(AP)(Carvicai)', 'X-RAY -C/S(AP)(Carvicai)', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('105', 'X-RAY - PNS (AP)', 'X-RAY - PNS (AP)', '350', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('106', 'ESR', 'Patho Test', '150', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('107', 'FBS CUS', 'Pathological test', '160', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('108', 'Hb%', 'Pathological test', '100', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('109', 'Physio-Therapy', 'Therapy', '1000', '', '0', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('114', '2HABF', 'Pathological test', '100', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('113', 'FBS', 'Pathological test', '100', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('115', 'S. TSH', 'Pathological test', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('116', 'S. T3', 'Pathological test', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('117', 'DC', 'Pathological test', '200', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('118', 'TC', 'Pathological test', '200', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('119', 'X-Ray CXR (Digital)', 'X-Ray', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('120', 'S. Uric acid', 'Pathological test', '250', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('122', 'U.S.G OF L/A ', 'U.S.G', '400', 'diagnostic', '30', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('125', 'Rt knee joient b/v', 'X-Ray', '500', 'diagnostic', '20', '0');
+INSERT INTO payment_category (`id`, `category`, `description`, `c_price`, `type`, `d_commission`, `h_commission`) VALUES ('126', 'eosinphil', 'Pathology Test', '100', 'diagnostic', '0', '0');
+
+
+#
+# TABLE STRUCTURE FOR: paymentgateway
+#
+
+DROP TABLE IF EXISTS paymentgateway;
+
+CREATE TABLE `paymentgateway` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `merchant_key` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `salt` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `y` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `APIUsername` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `APIPassword` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `APISignature` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+INSERT INTO paymentgateway (`id`, `name`, `merchant_key`, `salt`, `x`, `y`, `APIUsername`, `APIPassword`, `APISignature`, `status`) VALUES ('1', 'PayPal', '', '', '', '', 'API Username', 'API Password', 'API Signature', 'test');
+INSERT INTO paymentgateway (`id`, `name`, `merchant_key`, `salt`, `x`, `y`, `APIUsername`, `APIPassword`, `APISignature`, `status`) VALUES ('2', 'Pay U Money', 'Merchant Key', 'Salt', '', '', '', '', 'Aaw-Fd69z.JLuiq13ejMN-CsSMuuAPEXWUFPF5QW9sD22fp1hosGIFKo', 'test');
+
+
+#
+# TABLE STRUCTURE FOR: pharmacist
+#
+
+DROP TABLE IF EXISTS pharmacist;
+
+CREATE TABLE `pharmacist` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `y` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `ion_user_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+
+INSERT INTO pharmacist (`id`, `img_url`, `name`, `email`, `address`, `phone`, `x`, `y`, `ion_user_id`) VALUES ('7', 'uploads/favicon6.png', 'Mr. Pharmacist', 'pharmacist@dms.com', 'Pottersbar, Hertfordshire, UK', '+4479 5665 543367', '', '', '110');
+
+
+#
+# TABLE STRUCTURE FOR: pharmacy_expense
+#
+
+DROP TABLE IF EXISTS pharmacy_expense;
+
+CREATE TABLE `pharmacy_expense` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=141 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: pharmacy_expense_category
+#
+
+DROP TABLE IF EXISTS pharmacy_expense_category;
+
+CREATE TABLE `pharmacy_expense_category` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `y` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=62 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: pharmacy_payment
+#
+
+DROP TABLE IF EXISTS pharmacy_payment;
+
+CREATE TABLE `pharmacy_payment` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `vat` varchar(100) CHARACTER SET utf8 NOT NULL DEFAULT '0',
+  `x_ray` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `flat_vat` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `discount` varchar(100) CHARACTER SET utf8 NOT NULL DEFAULT '0',
+  `flat_discount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `gross_total` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `hospital_amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_amount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `category_amount` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `category_name` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `amount_received` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=1970 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: pharmacy_payment_category
+#
+
+DROP TABLE IF EXISTS pharmacy_payment_category;
+
+CREATE TABLE `pharmacy_payment_category` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `category` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `c_price` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `d_commission` int(100) DEFAULT NULL,
+  `h_commission` int(100) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: prescription
+#
+
+DROP TABLE IF EXISTS prescription;
+
+CREATE TABLE `prescription` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `patient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `symptom` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `advice` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `state` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `dd` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `medicine` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `validity` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `note` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=68 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: receptionist
+#
+
+DROP TABLE IF EXISTS receptionist;
+
+CREATE TABLE `receptionist` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `ion_user_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=latin1;
+
+INSERT INTO receptionist (`id`, `img_url`, `name`, `email`, `address`, `phone`, `x`, `ion_user_id`) VALUES ('7', '', 'Mr Receptionist', 'receptionist@dms.com', 'Collegepara, Rajbari', '+0123456789', '', '614');
+
+
+#
+# TABLE STRUCTURE FOR: service
+#
+
+DROP TABLE IF EXISTS service;
+
+CREATE TABLE `service` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `img_url` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `description` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+INSERT INTO service (`id`, `img_url`, `title`, `description`) VALUES ('1', '', 'Cardiac Excellence', 'Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence');
+INSERT INTO service (`id`, `img_url`, `title`, `description`) VALUES ('2', '', 'Cancer Treatment', 'Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence');
+INSERT INTO service (`id`, `img_url`, `title`, `description`) VALUES ('3', '', 'Stroke Management', 'Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence');
+INSERT INTO service (`id`, `img_url`, `title`, `description`) VALUES ('4', '', '24 / 7 Support', 'Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence Cardiac Excellence');
+
+
+#
+# TABLE STRUCTURE FOR: settings
+#
+
+DROP TABLE IF EXISTS settings;
+
+CREATE TABLE `settings` (
+  `id` int(10) NOT NULL AUTO_INCREMENT,
+  `system_vendor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `facebook_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `currency` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `language` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `discount` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `vat` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `login_title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `logo` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `invoice_logo` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `payment_gateway` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `sms_gateway` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `codec_username` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `codec_purchase_code` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=latin1;
+
+INSERT INTO settings (`id`, `system_vendor`, `title`, `address`, `phone`, `email`, `facebook_id`, `currency`, `language`, `discount`, `vat`, `login_title`, `logo`, `invoice_logo`, `payment_gateway`, `sms_gateway`, `codec_username`, `codec_purchase_code`) VALUES ('1', 'Doctor Care', 'Doctor Care', 'Boropool, Rajbari-7700', '+0123456789', 'admin@demo.com', '#', '$', 'spanish', 'flat', 'percentage', 'Login Title', 'uploads/logo-nonetext1.png', '', 'PayPal', 'MSG91', '', '');
+
+
+#
+# TABLE STRUCTURE FOR: slide
+#
+
+DROP TABLE IF EXISTS slide;
+
+CREATE TABLE `slide` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `img_url` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `text1` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `text2` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `text3` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `position` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `status` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
+
+INSERT INTO slide (`id`, `title`, `img_url`, `text1`, `text2`, `text3`, `position`, `status`) VALUES ('1', 'Slider 1', 'uploads/1503411077revised-bhatia-homebanner-03.jpg', 'Welcome To Hospital', 'Hospital Management System', 'Hospital', '2', 'Active');
+INSERT INTO slide (`id`, `title`, `img_url`, `text1`, `text2`, `text3`, `position`, `status`) VALUES ('2', 'Best Hospital management System', 'uploads/1707260345350542.jpg', 'Best Hospital management System', 'Best Hospital management System', 'Best Hospital management System', '1', 'Inactive');
+
+
+#
+# TABLE STRUCTURE FOR: sms
+#
+
+DROP TABLE IF EXISTS sms;
+
+CREATE TABLE `sms` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `date` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `message` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `recipient` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=56 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: sms_settings
+#
+
+DROP TABLE IF EXISTS sms_settings;
+
+CREATE TABLE `sms_settings` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `username` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `password` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `api_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `sender` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `authkey` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+INSERT INTO sms_settings (`id`, `name`, `username`, `password`, `api_id`, `sender`, `authkey`, `user`) VALUES ('1', 'Clickatell', 'rizviplabon', '', '3570596', '', '', '1');
+INSERT INTO sms_settings (`id`, `name`, `username`, `password`, `api_id`, `sender`, `authkey`, `user`) VALUES ('2', 'MSG91', '', '', '', '', '54646456546456456456456', '1');
+
+
+#
+# TABLE STRUCTURE FOR: template
+#
+
+DROP TABLE IF EXISTS template;
+
+CREATE TABLE `template` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `name` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `template` varchar(10000) CHARACTER SET utf8 DEFAULT NULL,
+  `user` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=10 DEFAULT CHARSET=latin1;
+
+INSERT INTO template (`id`, `name`, `template`, `user`, `x`) VALUES ('6', 'CBC', '<table align=\"center\" border=\"1\" bordercolor=\"#ccc\" cellpadding=\"5\" cellspacing=\"0\" >\n <thead>\n  <tr>\n   <th scope=\"col\">Head 1</th>\n   <th scope=\"col\">Head 2</th>\n   <th scope=\"col\">Head 3</th>\n   <th scope=\"col\">Head 4</th>\n   <th scope=\"col\">Head 5</th>\n  </tr>\n </thead>\n <tbody>\n  <tr>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n  </tr>\n  <tr>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n  </tr>\n </tbody>\n</table>\n\n<p>?</p>\n', '1', '');
+INSERT INTO template (`id`, `name`, `template`, `user`, `x`) VALUES ('3', 'Diagnostic', '<table align=\"center\" border=\"1\" cellpadding=\"1\" cellspacing=\"1\">\n <tbody>\n  <tr>\n   <td>? ?Lab Name? ??</td>\n   <td>? ?Value? ? ?</td>\n  </tr>\n  <tr>\n   <td>?</td>\n   <td>?</td>\n  </tr>\n  <tr>\n   <td>?</td>\n   <td>?</td>\n  </tr>\n </tbody>\n</table>\n\n<p>?</p>\n', '1', '');
+INSERT INTO template (`id`, `name`, `template`, `user`, `x`) VALUES ('5', 'Lipid  Profile', '<table align=\"center\" border=\"1\" cellpadding=\"1\" cellspacing=\"1\">\n <caption>Lipid Profile</caption>\n <thead>\n  <tr>\n   <th scope=\"col\">? ? ? Head1? ? ?</th>\n   <th scope=\"col\"><span>? ? ?Head2? ? ??</span></th>\n   <th scope=\"col\"><span>? ? ? Head3? ? ??</span></th>\n   <th scope=\"col\"><span>? ? ? Head4? ? ??</span></th>\n   <th scope=\"col\"><span>? ? ? Head5? ? ??</span></th>\n  </tr>\n </thead>\n <tbody>\n  <tr>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n  </tr>\n  <tr>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n   <td>?</td>\n  </tr>\n </tbody>\n</table>\n\n<p>?</p>\n', '1', '');
+INSERT INTO template (`id`, `name`, `template`, `user`, `x`) VALUES ('8', 'superadmin', '<table border=\"1\" cellpadding=\"1\" cellspacing=\"1\">\n <tbody>\n  <tr>\n   <td>gddgdga</td>\n   <td>gdgfdgdgfdgd</td>\n  </tr>\n  <tr>\n   <td>fgdfgdff</td>\n   <td>gfgdgfdgfd</td>\n  </tr>\n  <tr>\n   <td>gfdgfdd</td>\n   <td>\n   <p>gggfgfdgfdgd</p>\n\n   <p>?</p>\n   </td>\n  </tr>\n </tbody>\n</table>\n\n<p>?</p>\n', '1', '');
+INSERT INTO template (`id`, `name`, `template`, `user`, `x`) VALUES ('9', 'Lipid Profile Result', '<table align=\"center\" border=\"1\" cellpadding=\"1\" cellspacing=\"1\" summary=\"Result Of Lipid Profile \">\n <caption>Lipid Profile Result</caption>\n <tbody>\n  <tr>\n   <td>SL</td>\n   <td>Test Name</td>\n   <td>Test Result</td>\n   <td> Reference Valur</td>\n   <td> Comment</td>\n  </tr>\n  <tr>\n   <td>1</td>\n   <td>Lipid Profile</td>\n   <td>   100</td>\n   <td>     >10 < 150</td>\n   <td> Normal</td>\n  </tr>\n  <tr>\n   <td>2</td>\n   <td>Lipid Profile</td>\n   <td>   100</td>\n   <td>     >10 < 150</td>\n   <td> Normal</td>\n  </tr>\n  <tr>\n   <td>3</td>\n   <td>Lipid Profile</td>\n   <td>   100</td>\n   <td>     >10 < 150</td>\n   <td> Normal</td>\n  </tr>\n  <tr>\n   <td>4</td>\n   <td>Lipid Profile</td>\n   <td>   100</td>\n   <td>     >10 < 150</td>\n   <td> Normal</td>\n  </tr>\n </tbody>\n</table>\n\n<p>?</p>\n', '1', '');
+
+
+#
+# TABLE STRUCTURE FOR: time_schedule
+#
+
+DROP TABLE IF EXISTS time_schedule;
+
+CREATE TABLE `time_schedule` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `doctor` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `weekday` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `s_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `e_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `s_time_key` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `duration` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=94 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: time_slot
+#
+
+DROP TABLE IF EXISTS time_slot;
+
+CREATE TABLE `time_slot` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `doctor` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `s_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `e_time` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `weekday` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `s_time_key` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=2085 DEFAULT CHARSET=latin1;
+
+#
+# TABLE STRUCTURE FOR: users
+#
+
+DROP TABLE IF EXISTS users;
+
+CREATE TABLE `users` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `ip_address` varchar(15) NOT NULL,
+  `username` varchar(100) NOT NULL,
+  `password` varchar(255) NOT NULL,
+  `salt` varchar(255) DEFAULT NULL,
+  `email` varchar(100) NOT NULL,
+  `activation_code` varchar(40) DEFAULT NULL,
+  `forgotten_password_code` varchar(40) DEFAULT NULL,
+  `forgotten_password_time` int(11) unsigned DEFAULT NULL,
+  `remember_code` varchar(40) DEFAULT NULL,
+  `created_on` int(11) unsigned NOT NULL,
+  `last_login` int(11) unsigned DEFAULT NULL,
+  `active` tinyint(1) unsigned DEFAULT NULL,
+  `first_name` varchar(50) DEFAULT NULL,
+  `last_name` varchar(50) DEFAULT NULL,
+  `company` varchar(100) DEFAULT NULL,
+  `phone` varchar(20) DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=682 DEFAULT CHARSET=utf8;
+
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('1', '127.0.0.1', 'admin', '$2y$08$EsaKT2M8qXHVS5vOFmnF5O9stKpqdwO9XM9o9XGFIl.j1/LpzyGqm', '', 'admin@dms.com', '', 'eX0.Bq6nP57EuXX4hJkPHO973e7a4c25f1849d3a', '1511432365', 'zCeJpcj78CKqJ4sVxVbxcO', '1268889823', '1578086027', '1', 'Admin', 'istrator', 'ADMIN', '0');
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('109', '113.11.74.192', 'Mrs Nurse', '$2y$08$PSVkPRrzJjaTqQ.voEOsmOfEytSfOX6H9n0hlBwDyDi8AgV4o4QGW', NULL, 'nurse@dms.com', NULL, NULL, NULL, NULL, '1435082243', '1554962195', '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('110', '113.11.74.192', 'Mr. Pharmacist', '$2y$08$2oXzYg1Ox9L8igKV8HFsvu.j5Oq3rzu8GqCT.THTtUE1rM3KCfhfa', NULL, 'pharmacist@dms.com', NULL, NULL, NULL, 'mbeMop6vTuscFYmD2M4Iqu', '1435082359', '1558814264', '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('111', '113.11.74.192', 'Mr Laboratorist', '$2y$08$hKroDFD0iwDdxIryXvBziO59sYgCKKyosi0vAqYHNKOCIU4u8YfDi', NULL, 'laboratorist@dms.com', NULL, NULL, NULL, NULL, '1435082438', '1554887018', '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('112', '113.11.74.192', 'Mr. Accountant', '$2y$08$y55tqOTcnpji1HMaZYp2MOdEZN8Qjxxb0kxrPMb0tix/xYC7M.sLa', NULL, 'accountant@dms.com', NULL, NULL, NULL, NULL, '1435082637', '1556362536', '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('610', '103.231.162.58', 'sdhsjgj', '$2y$08$JBdbYvWr0BaswifulhauLOBizxRMnx1XZeuaUNJ6utt4AqH.7c/je', NULL, 'jgjjhjgjh', NULL, NULL, NULL, NULL, '1505800387', NULL, '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('611', '103.231.162.58', 'vsgdvfds', '$2y$08$N3qoioTmznb7./7dhrfXp.ZAp7H1Vu2rU.EWdFUx5z7ECcm.la7Ee', NULL, 'hfhgfhfhgf', NULL, NULL, NULL, NULL, '1505800659', NULL, '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('612', '103.231.162.58', 'vsgdvfds1', '$2y$08$rjDLi21IP2Dncaz/FgXkJ.DYoxoYigHOjgkv4MgQby.2UQ5G61qVm', NULL, 'hfhgfhfhgfefeer', NULL, NULL, NULL, NULL, '1505800739', NULL, '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('614', '103.231.162.58', 'Mr Receptionist', '$2y$08$gRED3Xn8w6N58iZJWx7zWei72MlpRGNiDMms2aYKrKD31hVLgqbGW', NULL, 'receptionist@dms.com', NULL, NULL, NULL, NULL, '1505800835', '1556830973', '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('652', '103.231.162.58', 'Mr Doctor', '$2y$08$kkR4on4f12tFQ8ZVO039lOkgjYOCIX6HhiGZXcLJaw5dAErZbvPAy', NULL, 'doctor@dms.com', NULL, NULL, NULL, NULL, '1510865807', '1556362571', '1', NULL, NULL, NULL, NULL);
+INSERT INTO users (`id`, `ip_address`, `username`, `password`, `salt`, `email`, `activation_code`, `forgotten_password_code`, `forgotten_password_time`, `remember_code`, `created_on`, `last_login`, `active`, `first_name`, `last_name`, `company`, `phone`) VALUES ('681', '103.231.161.30', 'Mr Patient', '$2y$08$bmrV0FkY.cymcx9n5l333O/CT7A4wXpe7tJkFMr4t9qMjw5GHU.9m', NULL, 'patient@dms.com', NULL, NULL, NULL, NULL, '1548872582', '1556362732', '1', NULL, NULL, NULL, NULL);
+
+
+#
+# TABLE STRUCTURE FOR: users_groups
+#
+
+DROP TABLE IF EXISTS users_groups;
+
+CREATE TABLE `users_groups` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `user_id` int(11) unsigned NOT NULL,
+  `group_id` mediumint(8) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `uc_users_groups` (`user_id`,`group_id`),
+  KEY `fk_users_groups_users1_idx` (`user_id`),
+  KEY `fk_users_groups_groups1_idx` (`group_id`),
+  CONSTRAINT `fk_users_groups_groups1` FOREIGN KEY (`group_id`) REFERENCES `groups` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION,
+  CONSTRAINT `fk_users_groups_users1` FOREIGN KEY (`user_id`) REFERENCES `users` (`id`) ON DELETE CASCADE ON UPDATE NO ACTION
+) ENGINE=InnoDB AUTO_INCREMENT=684 DEFAULT CHARSET=utf8;
+
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('1', '1', '1');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('111', '109', '6');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('112', '110', '7');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('113', '111', '8');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('114', '112', '3');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('613', '611', '10');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('614', '612', '10');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('616', '614', '10');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('654', '652', '4');
+INSERT INTO users_groups (`id`, `user_id`, `group_id`) VALUES ('683', '681', '5');
+
+
+#
+# TABLE STRUCTURE FOR: website_settings
+#
+
+DROP TABLE IF EXISTS website_settings;
+
+CREATE TABLE `website_settings` (
+  `id` int(100) NOT NULL AUTO_INCREMENT,
+  `title` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `logo` varchar(1000) CHARACTER SET utf8 DEFAULT NULL,
+  `address` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `phone` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `emergency` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `support` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `email` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `currency` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `block_1_text_under_title` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `service_block__text_under_title` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `doctor_block__text_under_title` varchar(500) CHARACTER SET utf8 DEFAULT NULL,
+  `facebook_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `twitter_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `google_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `youtube_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `skype_id` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  `x` varchar(100) CHARACTER SET utf8 DEFAULT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM AUTO_INCREMENT=3 DEFAULT CHARSET=latin1;
+
+INSERT INTO website_settings (`id`, `title`, `logo`, `address`, `phone`, `emergency`, `support`, `email`, `currency`, `block_1_text_under_title`, `service_block__text_under_title`, `doctor_block__text_under_title`, `facebook_id`, `twitter_id`, `google_id`, `youtube_id`, `skype_id`, `x`) VALUES ('1', 'Doctor Care', '', 'Boropool, Rajbari-7700', '+0123456789', '+0123456789', '+0123456789', 'admin@demo.com', '$', 'Best Hospital In The City', 'Aenean nibh ante, lacinia non tincidunt nec, lobortis ut tellus. Sed in porta diam.', 'We work with forward thinking clients to create beautiful, honest and amazing things that bring positive results.', 'https://www.facebook.com/rizvi.plabon', 'https://www.facebook.com/rizvi.plabon', 'https://www.facebook.com/rizvi.plabon', 'https://www.facebook.com/rizvi.plabon', 'https://www.facebook.com/rizvi.plabon', NULL);
+
+
